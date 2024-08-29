@@ -1,0 +1,55 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+	Name = "SEAHUB - PUBLIC",
+	LoadingTitle = "PROJECT: TCCB",
+	LoadingSubtitle = "by qqwrxxxx",
+	ConfigurationSaving = {
+		Enabled = true,
+		FolderName = "seahub",
+		FileName = "tccb"
+	},
+	KeySystem = false, 
+	KeySettings = {
+		Title = "Sirius Hub",
+		Subtitle = "Key System",
+		Note = "Join the discord (discord.gg/sirius)",
+		SaveKey = true,
+		Key = "ABCDEF"
+	}
+})
+
+Rayfield:Notify("Welcome to the club buddy", "Thanks for u play with seahub scripts", 4483362458) -- Notification -- Title, Content, Image
+
+local Tab1 = Window:CreateTab("Tab Example", 4483362458) -- Title, Image
+
+local Section1 = Tab1:CreateSection("Saitama Characters") 
+
+local Button1 = Tab1:CreateButton({
+	Name = "The World V2 (Dio)",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Doumaix/qqwrxxxx/main/eee.lua"))()
+	end,
+})
+
+local Tab2 = Window:CreateTab("Other", 4483362458) -- Title, Image
+
+local Button2 = Tab2:CreateButton({
+	Name = "Dio Quotes",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Doumaix/qqwrxxxx/main/dio_quotes.lua"))()
+	end,
+})
+
+local CircleButton = Window:CreateButton({
+	Name = "Press K",
+	Appearance = {
+		Shape = "Circle",
+		Color = Color3.fromRGB(128, 0, 128), 
+	},
+	Callback = function()
+		local VirtualInputManager = game:GetService("VirtualInputManager")
+		VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.K, false, game)
+		VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.K, false, game)
+	end,
+})
